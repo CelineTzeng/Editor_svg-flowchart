@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公共工程流程圖編輯器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h2>流程圖編輯區</h2>
+
+        <div id="node-list"></div>
+
+        <button id="btn-add" class="primary-btn">+ 新增步驟</button>
+
+        <hr>
+
+        <button id="btn-png" class="png-btn">匯出 PNG 圖片</button>
+        <button id="btn-svg" class="svg-btn">匯出 SVG 檔</button>
+    </div>
+
+    <div class="canvas-container">
+        <div class="canvas-scroll">
+            <svg id="flowchart-svg" width="1000" height="800" viewBox="0 0 1000 800"></svg>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* 基本版面重置 */
+* {
+    box-sizing: border-box;
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+/* 左側邊欄 */
+.sidebar {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+/* 步驟編輯卡片 */
+.node-item {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    background: #fafafa;
+}
+
+.node-item select,
+.node-item textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 按鈕通用樣式 */
+button {
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+/* 新增步驟按鈕 */
+.primary-btn {
+    background: #28a745;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #218838;
+}
+
+/* 匯出 PNG 按鈕 */
+.png-btn {
+    background: #fd7e14;
+    color: white;
+    margin-top: 5px;
+}
+
+.png-btn:hover {
+    background: #e36c0a;
+}
+
+/* 匯出 SVG 按鈕 */
+.svg-btn {
+    background: #2b579a;
+    color: white;
+    margin-top: 5px;
+}
+
+.svg-btn:hover {
+    background: #1e3d6b;
+}
+
+/* 刪除步驟按鈕 */
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    margin-top: 8px;
+    padding: 6px;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* 右側畫布區 */
+.canvas-container {
+    flex: 1;
+    padding: 30px;
+    background: #cbd5e1;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* 模擬白色圖紙 */
+.canvas-scroll {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* 1000px SVG + 左右各 40px 留白 */
+    width: 1080px;
+    min-height: 100%;
+}
+
+/* SVG 畫布 */
+#flowchart-svg {
+    background: white;
+}
